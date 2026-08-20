@@ -8,5 +8,8 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('TRAVELER OF THE BORDERLANDS');
+titulo() {
+throw new Error('Method not implemented.');
+}
+  protected readonly title = signal('GESTIÓN DE CLIENTES');
 }

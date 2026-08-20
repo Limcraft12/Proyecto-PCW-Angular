@@ -21,7 +21,7 @@
         </li>
 
         <li class="nav-item active">
-          <a class="nav-link" href="#">productos</a>
+          <a class="nav-link" href="#">clientes</a>
         </li>
 
        
@@ -53,18 +53,10 @@
     <div class="col-md-12">
 
       <h2>
-        {{title()}}
+        Gestión de Clientes
       </h2>
 
-      <button type="button"
-              class="btn btn-info"
-              style="margin-top: 10px; margin-bottom: 5px;"
-              data-bs-toggle="modal"
-              data-bs-target="#crearproductomodal" data-bs-target="#crearproductoModal" data-bs-whatever="@mdo">
-
-        Crearproducto
-
-      </button>
+     
 
 
       <table class="table">
@@ -72,12 +64,11 @@
         <thead>
 
           <tr>
-            <th scope="col">acciones</th>
+            <th scope="col">#</th>
             <th scope="col">ID</th>
-            <th scope="col">codigo</th>
+            <th scope="col">nombre</th>
             <th scope="col">Descripcion</th>
-            <th scope="col">Precio</th>
-            <th scope="col">stock</th>
+            <th scope="col">numero de registro</th>
           </tr>
 
         </thead>
@@ -93,43 +84,57 @@
                       class="btn btn-primary btn-sm"
                       style="margin-right: 5px; "
                       data-bs-toggle="modal"
-                      data-bs-target="#editarproductoModal">
-                editar
+                      data-bs-target="#ingresarModal">
+                ingresar
               </button>
 
               <button type="button"
                       class="btn btn-danger btn-sm" style="margin-right: 5px; "
                       data-bs-toggle="modal"
-                      data-bs-target="#eliminarModal">
-                eliminar
+                      data-bs-target="#salir_del_registroModal">
+                salir del registro
               </button>
 
             </td>
 
-           
-
-  <tr>
-    <td>1</td>
+      <tr>
+    <td></td>
     <td>0001</td>
     <td>pepsiman</td>
-    <td>L 30</td>
-    <td>100</td>
+    <td> animador</td>
+    <td>1</td>
   </tr>
-
+  
   <tr>
+    <td></td>
+    <td>0081</td>
+    <td>Miguelon Perez</td>
+    <td>agente inmoviliario</td>
     <td>2</td>
-    <td>0002</td>
-    <td>pepsi</td>
-    <td>L 30</td>
-    <td>80</td>
   </tr>
 
   <tr>
+    <td></td>
+    <td>0030</td>
+    <td>Barney</td>
+    <td>es un dinosaurio</td>
     <td>3</td>
-    <td>0003</td>
-    <td>coca cola</td>
-    <td>L 25</td>
-    <td>120</td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td>1423</td>
+    <td>Son Goku</td>
+    <td>Agricultor</td>
+    <td>4</td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td>3424</td>
+    <td>Topolliyo</td>
+    <td>raton actor</td>
+    <td>5</td>
   </tr>
 
 </tbody>
@@ -154,20 +159,16 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-
         <form>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">codigo</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">buen dia .</div>
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">descripcion </label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
-  </div>
- 
-</form>
-        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">codigo</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text"> .</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">descripcion </label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label"> precio:</label>
             <input type="text" class="form-control" id="recipient-name">
@@ -186,63 +187,51 @@
   </div>
 </div>
 
-
-
-
-
-<div class="modal fade" id="editarproductoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="ingresarModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">editar producto</h5>
+        <h5 class="modal-title" id="exampleModalLabel">registrar entrada de cliente</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-
-        <form>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">codigo</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">buen dia .</div>
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">descripcion </label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
-  </div>
- 
-</form>
         <form>
           <div class="mb-3">
-            <label for="recipient-name" class="col-form-label"> precio:</label>
-            <input type="text" class="form-control" id="recipient-name">
+            <label for="exampleInputEmail1" class="form-label">Registro de clientes</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">buen dia .</div>
           </div>
           <div class="mb-3">
-            <label for="message-text" class="col-form-label">stock:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <label for="correo" class="form-label">correo electronico </label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3">
+            <label for="contraceña" class="col-form-label"> contraceña:</label>
+            <input type="password" class="form-control" id="contraceña" placeholder="ingrese su contraceña">
           </div>
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">actualizar </button>
+        <button type="button" class="btn btn-primary">guardar </button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="eliminarModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="salir_del_registroModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">estas seguro de eliminar este producto?</h5>
+        <h5 class="modal-title" id="exampleModalLabel">estas seguro de salir</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      aseptando la ventan de dialogo abras eliminado el registro de la base de datos, si deseas eliminarlo da click en el boton eliminar
+      aseptando la ventan de dialogo abras salido  de el registro de la base de datos, si deseas salir da click en el boton eliminar
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cancelar</button>
-        <button type="button" class="btn btn-danger">eliminar</button>
+        <button type="button" class="btn btn-danger">salir</button>
       </div>
     </div>
   </div>
